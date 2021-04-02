@@ -21,6 +21,7 @@ def spell_correction():
 
 
 @app.route('/dia-res', methods=['POST'])
+@cross_origin('*')
 def diacritic_restoration():
     sentence = request.get_json().get('sentence')
 
